@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 22, 2025 at 03:52 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost:3306
+-- Generation Time: Apr 23, 2025 at 02:46 PM
+-- Server version: 8.4.3
+-- PHP Version: 8.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mahasiswa` (
-  `id` int(11) NOT NULL,
-  `nim` varchar(15) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `jurusan` varchar(100) NOT NULL
+  `id` int NOT NULL,
+  `nim` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `nama` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `jurusan` varchar(100) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -39,11 +39,12 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `jurusan`) VALUES
-(1, '23001', 'Budi Santoso', 'Teknik Informatika'),
-(2, '23002', 'Dewi Anggraini', 'Sistem Informasi'),
-(3, '23003', 'Adi Wijaya', 'Teknik Komputer'),
-(4, '23004', 'Putri Lestari', 'Manajemen'),
-(5, '23005', 'Rizky Hidayat', 'Sistem Informasi');
+(1, '23001', 'Satria Kusuma', 'Teknik Informatika'),
+(2, '23002', 'Raffi Atalla', 'Sistem Informasi'),
+(3, '23003', 'Ahmad Naufal', 'Teknik Komputer'),
+(4, '23004', 'Soca Rasen', 'Manajemen Bisnis'),
+(5, '23005', 'Muhammad Arap', 'Sistem Informasi'),
+(6, '23006', 'Putri Azka', 'Manajemen Bisnis');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +64,7 @@ ALTER TABLE `mahasiswa`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
